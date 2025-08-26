@@ -167,17 +167,35 @@ const StartDiscovery = () => {
     setIsSubmitting(true);
 
     try {
-      const { error } = await supabase
+      // First, save to database
+      const { error: dbError } = await supabase
         .from('contact_submissions')
         .insert({
           full_name: formData.fullName,
           business_name: formData.businessName,
           work_email: formData.workEmail,
-          phone_number: formData.phoneNumber || null
+          mobile_number: formData.phoneNumber || null,
+          source: 'discovery_page'
         });
 
-      if (error) {
-        throw error;
+      if (dbError) {
+        throw dbError;
+      }
+
+      // Then, send email to Alex
+      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.fullName,
+          email: formData.workEmail,
+          business_name: formData.businessName,
+          phone_number: formData.phoneNumber,
+          form_type: 'Discovery Call Request',
+          source: 'discovery_page'
+        }
+      });
+
+      if (emailError) {
+        console.error('Email error (non-critical):', emailError);
       }
 
       toast.success("Thank you! We'll be in touch soon to schedule your intro call.");

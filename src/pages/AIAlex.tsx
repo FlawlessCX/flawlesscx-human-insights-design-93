@@ -186,7 +186,7 @@ const AIAlex = () => {
   const fetchVideos = async () => {
     try {
       const { data, error } = await supabase
-        .from('ai_alex_content')
+        .from('ai_alex_videos')
         .select('*')
         .eq('is_published', true)
         .order('display_order', { ascending: true })

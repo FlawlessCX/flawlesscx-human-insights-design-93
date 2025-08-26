@@ -43,7 +43,21 @@ const LinkedInInvite = () => {
           lead_status: 'new'
         });
 
-      if (error) throw error;
+      // Then, send email to Alex
+      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.full_name,
+          email: formData.work_email,
+          business_name: formData.business_name,
+          phone_number: formData.mobile_number,
+          form_type: 'LinkedIn Consultation Request',
+          source: 'linkedin'
+        }
+      });
+
+      if (emailError) {
+        console.error('Email error (non-critical):', emailError);
+      }
 
       setIsSubmitted(true);
       toast({

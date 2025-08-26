@@ -29,7 +29,7 @@ const NewsAndVideos = () => {
   const fetchContent = async () => {
     try {
       const { data, error } = await supabase
-        .from('news_videos_content')
+        .from('news_videos')
         .select('*')
         .eq('is_published', true)
         .order('published_date', { ascending: false });

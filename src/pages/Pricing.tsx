@@ -212,7 +212,7 @@ const Pricing = () => {
                     </p>
                     <div className="text-center mt-auto">
                       <Button size="lg" className="text-lg px-8 py-4 w-full" asChild>
-                        <Link to="/contact">Book time →</Link>
+                        <Link to="/start-discovery">Book Discovery Call →</Link>
                       </Button>
                     </div>
                   </CardContent>
@@ -260,7 +260,7 @@ const Pricing = () => {
                     
                     <div className="text-center">
                       <Button size="lg" className="text-lg px-8 py-4 w-full" asChild>
-                        <Link to="/contact">Enquire about subscription →</Link>
+                        <Link to="/start-discovery">Book Discovery Call →</Link>
                       </Button>
                     </div>
                   </CardContent>
@@ -287,7 +287,7 @@ const Pricing = () => {
                     </p>
                     <div className="text-center mt-auto">
                       <Button size="lg" className="text-lg px-8 py-4 w-full" asChild>
-                        <Link to="/contact">Request a quote →</Link>
+                        <Link to="/start-discovery">Book Discovery Call →</Link>
                       </Button>
                     </div>
                   </CardContent>

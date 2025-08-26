@@ -85,7 +85,7 @@ export default function AIAlexContentForm() {
 
       // Save to database
       const { error } = await supabase
-        .from('ai_alex_content')
+        .from('ai_alex_videos')
         .insert({
           title: values.title,
           description: values.description,

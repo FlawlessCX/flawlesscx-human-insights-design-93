@@ -99,7 +99,7 @@ export default function NewsVideosContentForm() {
 
       // Save to database
       const { error } = await supabase
-        .from('news_videos_content')
+        .from('news_videos')
         .insert({
           title: values.title,
           description: values.description,
