@@ -227,16 +227,6 @@ const About = () => {
                 
                 <div className="flex items-center gap-4 p-4 bg-white rounded-lg border">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground">Phone</h4>
-                    <p className="text-muted-foreground">+44 20 7946 0958</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-center gap-4 p-4 bg-white rounded-lg border">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
