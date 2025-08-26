@@ -74,7 +74,7 @@ const About = () => {
               <div className="text-center">
                 <div className="w-32 h-40 bg-gray-200 rounded-lg mx-auto mb-4 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=200&h=250&fit=crop&crop=face" 
+                    src="/team/Alex Bradbury 02 2025.JPG" 
                     alt="Alex Bradbury" 
                     className="w-full h-full object-cover"
                   />
@@ -86,7 +86,7 @@ const About = () => {
               <div className="text-center">
                 <div className="w-32 h-40 bg-gray-200 rounded-lg mx-auto mb-4 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=200&h=250&fit=crop&crop=face" 
+                    src="/team/Sean-Quinlivin.jpg" 
                     alt="Sean Quinlivan" 
                     className="w-full h-full object-cover"
                   />
@@ -98,7 +98,7 @@ const About = () => {
               <div className="text-center">
                 <div className="w-32 h-40 bg-gray-200 rounded-lg mx-auto mb-4 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=200&h=250&fit=crop&crop=face" 
+                    src="/team/Mark-Johnston.jpg" 
                     alt="Mark Johnston" 
                     className="w-full h-full object-cover"
                   />
@@ -110,7 +110,7 @@ const About = () => {
               <div className="text-center">
                 <div className="w-32 h-40 bg-gray-200 rounded-lg mx-auto mb-4 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=200&h=250&fit=crop&crop=face" 
+                    src="/team/Alain-Kowalczyk.jpg" 
                     alt="Alain Kowalczyk" 
                     className="w-full h-full object-cover"
                   />
@@ -122,7 +122,7 @@ const About = () => {
               <div className="text-center">
                 <div className="w-32 h-40 bg-gray-200 rounded-lg mx-auto mb-4 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=200&h=250&fit=crop&crop=face" 
+                    src="/team/Nadine Drelaud.jpeg" 
                     alt="Nadine Drelaud" 
                     className="w-full h-full object-cover"
                   />
@@ -134,7 +134,7 @@ const About = () => {
               <div className="text-center">
                 <div className="w-32 h-40 bg-gray-200 rounded-lg mx-auto mb-4 overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=200&h=250&fit=crop&crop=face" 
+                    src="/team/Sarah Bradbury.png" 
                     alt="Sarah Bradbury" 
                     className="w-full h-full object-cover"
                   />
