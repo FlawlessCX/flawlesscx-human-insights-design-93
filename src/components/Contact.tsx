@@ -1,8 +1,86 @@
 
 import { Mail, MapPin, Phone, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
+  });
+  const { toast } = useToast();
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // First, save to database
+      const { error: dbError } = await supabase
+        .from('contact_submissions')
+        .insert({
+          full_name: formData.name,
+          work_email: formData.email,
+          business_name: formData.company,
+          message: formData.message,
+          source: 'contact_page'
+        });
+
+      if (dbError) {
+        throw dbError;
+      }
+
+      // Then, send email to Alex
+      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          business_name: formData.company,
+          form_type: 'Contact Form',
+          source: 'contact_page'
+        }
+      });
+
+      if (emailError) {
+        console.error('Email error (non-critical):', emailError);
+      }
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        message: ''
+      });
+
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <section className="py-24 bg-slate-900 text-white">
       <div className="container mx-auto px-6">
@@ -55,13 +133,17 @@ const Contact = () => {
           <div className="bg-white text-slate-900 p-8 rounded-3xl">
             <h3 className="text-2xl font-bold mb-6">Start the Conversation</h3>
             
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium mb-2">Your Name</label>
                 <input 
                   type="text" 
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Enter your name"
+                  required
                 />
               </div>
               
@@ -69,8 +151,12 @@ const Contact = () => {
                 <label className="block text-sm font-medium mb-2">Email Address</label>
                 <input 
                   type="email" 
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="your@email.com"
+                  required
                 />
               </div>
               
@@ -78,6 +164,9 @@ const Contact = () => {
                 <label className="block text-sm font-medium mb-2">Company</label>
                 <input 
                   type="text" 
+                  name="company"
+                  value={formData.company}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Your company name"
                 />
@@ -87,13 +176,16 @@ const Contact = () => {
                 <label className="block text-sm font-medium mb-2">What's Your Biggest Customer Experience Challenge?</label>
                 <textarea 
                   rows={4}
+                  name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Tell us about the problems you're facing with customer experience..."
                 />
               </div>
               
-              <Button className="w-full py-4 text-lg">
-                Send Message & Schedule Call
+              <Button type="submit" disabled={isSubmitting} className="w-full py-4 text-lg">
+                {isSubmitting ? "Sending..." : "Send Message & Schedule Call"}
               </Button>
             </form>
             
