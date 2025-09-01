@@ -17,7 +17,7 @@ const Hero = () => {
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
           We diagnose root causes across your customer and business experience, then design and deliver fixes — fast. 
-          Powered by DiscoveryStack® and agentic AI.
+          Powered by DiscoveryStack® and Agentic AI.
         </p>
         
         <div className="flex justify-center mb-16">
