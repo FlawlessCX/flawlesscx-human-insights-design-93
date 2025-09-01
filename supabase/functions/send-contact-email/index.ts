@@ -29,7 +29,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email to Alex
     const emailResponse = await resend.emails.send({
-      from: "FlawlessCX <onboarding@resend.dev>",
+      from: "FlawlessCX <noreply@flawlesscx.com>",
       to: ["alex@flawlesscx.com"],
       subject: `New ${form_type} Form Submission - ${name}`,
       html: `
