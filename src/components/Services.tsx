@@ -1,5 +1,7 @@
 
 import { Search, Palette, Settings, TrendingUp, Bot } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -48,9 +50,13 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Designed to <span className="text-primary">Deliver Results</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
             Everything runs Discovery → Design → Delivery. All pricing indicative; confirmed post-scoping.
           </p>
+          
+          <Button variant="outline" size="lg" asChild>
+            <Link to="/value-proposition">See Industry-Specific Solutions</Link>
+          </Button>
         </div>
         
         <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">

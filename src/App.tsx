@@ -21,6 +21,7 @@ import Auth from "./pages/Auth";
 import ProtectedRoute from "./components/ProtectedRoute";
 import NotFound from "./pages/NotFound";
 import LinkedInInvite from "./pages/LinkedInInvite";
+import ValueProposition from "./pages/ValueProposition";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const AppRoutes = () => {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/discovery-stack" element={<DiscoveryStack />} />
             <Route path="/why-flawlesscx" element={<WhyFlawlessCX />} />
+            <Route path="/value-proposition" element={<ValueProposition />} />
             <Route path="/start-discovery" element={<StartDiscovery />} />
             <Route path="/news-videos" element={<NewsAndVideos />} />
             <Route path="/subscription-services" element={<SubscriptionServices />} />

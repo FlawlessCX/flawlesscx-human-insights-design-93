@@ -28,6 +28,7 @@ const Header = () => {
 
   const navigation = [
     { name: "Why FlawlessCX", href: "/why-flawlesscx" },
+    { name: "Value Propositions", href: "/value-proposition" },
     { name: "DiscoveryStack®", href: "/discovery-stack" },
     { name: "Pricing & Services", href: "/pricing" },
     { name: "About Us", href: "/about" },
