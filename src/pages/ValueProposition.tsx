@@ -10,8 +10,8 @@ const sectors = [
   { id: 'retail', name: 'Retail', active: true },
   { id: 'financial', name: 'Financial Services', active: true },
   { id: 'telecoms', name: 'Telecoms', active: true },
-  { id: 'groceries', name: 'Groceries', active: false },
-  { id: 'auto', name: 'Automotive', active: false },
+  { id: 'groceries', name: 'Groceries', active: true },
+  { id: 'auto', name: 'Automotive', active: true },
 ];
 
 const sectorData = {
@@ -104,6 +104,72 @@ const sectorData = {
       "People + process + tech: recommendations that teams can actually deliver"
     ],
     pitch: "\"Telecoms is unforgiving—volumes spike, complexity multiplies, and one weak link creates churn. We use DiscoveryStack® to map customer journeys alongside provisioning, billing and support operations to find root causes and the smallest set of fixes with the biggest impact. In three to four weeks you'll have a ranked plan to cut avoidable contact, stabilise experience, and deploy AI where it makes a safe, provable difference.\""
+  },
+  groceries: {
+    headline: "Remove substitution and delivery friction. Protect margin and loyalty.",
+    oneLiner: "FlawlessCX maps end‑to‑end grocery journeys (shop → pick → deliver/collect → credit) alongside the fulfilment engine to surface the smallest set of fixes with the biggest commercial impact—ready to scale safely with agentic AI.",
+    problems: [
+      "Slot search/booking friction and basket loss",
+      "Out‑of‑stocks, picking accuracy and substitution rules that frustrate shoppers",
+      "On‑time delivery and ETA accuracy; WISMO and driver handoffs",
+      "Temperature control/cold‑chain breaches and damage claims",
+      "Click & Collect queueing, signage and store handovers",
+      "Refund/credit latency that erodes trust",
+      "Peaks readiness (Christmas, promos) and cost‑to‑serve blowouts"
+    ],
+    deliverables: [
+      "DiscoveryStack® diagnostic across CX + store/fulfilment/last‑mile ops",
+      "Prioritised fix list tied to revenue, loyalty and cost‑to‑serve",
+      "Service blueprint(s) for delivery, substitutions and credits",
+      "\"No‑regrets\" quick‑wins and a 90‑day change plan",
+      "Pragmatic AI opportunities: demand signals, proactive ETA comms, agent assist"
+    ],
+    outcomes: [
+      "Higher on‑time delivery and reduced WISMO contact",
+      "Fewer credits/substitution complaints; faster refund resolution",
+      "Improved NPS at delivery and collection moments",
+      "Lower cost‑to‑serve across contact centre and last‑mile",
+      "Increased repeat rate and basket value"
+    ],
+    proofPoints: [
+      "Experience across high‑volume, time‑critical grocery operations",
+      "Friction‑first diagnostics that translate into measurable uplift",
+      "People + process + tech: recommendations teams can actually deliver"
+    ],
+    pitch: "\"Grocery CX lives or dies on promises kept—stock, substitutions and on‑time delivery. We use DiscoveryStack® to map the customer journey alongside picking, fulfilment and last‑mile operations, pinpointing root causes and a short, ranked list of fixes. In three to four weeks you get a measurable plan to cut WISMO, protect margin and loyalty, and identify where AI (proactive ETAs, smarter subs, agent assist) adds safe, provable value.\""
+  },
+  auto: {
+    headline: "Unblock leads, orders and aftersales. Build lifetime loyalty.",
+    oneLiner: "FlawlessCX uncovers the operational weak links across research, lead handling, finance, factory order tracking and aftersales—uniting OEM, captive finance and retailer operations—so you lift conversion and service retention while reducing complaints and cost.",
+    problems: [
+      "Slow lead‑to‑appointment speed and inconsistent follow‑up quality",
+      "Finance/PCP application friction and compliance overhead",
+      "Factory build/order tracking opacity and missed delivery promises",
+      "Test‑drive booking, retailer handoffs and show‑rate drop‑off",
+      "Part‑exchange journeys lacking transparency and confidence",
+      "Service booking bottlenecks, warranty claims and recall communications",
+      "Fragmented data and tooling across OEM CRM, DMS and contact centres",
+      "Connected‑car app onboarding and support that drives repeat contact"
+    ],
+    deliverables: [
+      "DiscoveryStack® diagnostic across journeys + retail/after‑sales operations",
+      "Prioritised fixes tied to lead‑to‑sale, CSI and cost‑to‑serve drivers",
+      "Service blueprints for lead handling, order tracking and service booking",
+      "\"No‑regrets\" quick‑wins and a 90‑day change plan",
+      "AI opportunities: intelligent triage, advisor assist, proactive order comms"
+    ],
+    outcomes: [
+      "Higher lead‑to‑appointment and lead‑to‑sale conversion",
+      "Faster response times and improved test‑drive show rates",
+      "Increased service retention and CSI; reduced complaint volume",
+      "Lower cost per case across customer and retailer support"
+    ],
+    proofPoints: [
+      "Built for complex, multi‑entity environments (OEM ↔ finance ↔ retailer)",
+      "Delivery‑minded recommendations: weeks to action, not months of theory",
+      "Tech‑agnostic: make the current stack work harder before buying more"
+    ],
+    pitch: "\"Automotive journeys break where OEM, finance and retailers meet. We use DiscoveryStack® to map customer experience and the networked operations behind it, exposing root causes and a focused, measurable set of fixes. In three to four weeks you'll have a ranked plan to speed up lead handling, make orders and handovers transparent, and strengthen aftersales—plus safe AI plays like advisor assist and proactive order communications.\""
   }
 };
 
@@ -169,12 +235,9 @@ const ValueProposition = () => {
                 key={sector.id}
                 variant={selectedSector === sector.id ? "default" : "outline"}
                 size="lg"
-                onClick={() => sector.active && setSelectedSector(sector.id)}
-                disabled={!sector.active}
-                className={`${!sector.active ? 'opacity-50' : ''}`}
+                onClick={() => setSelectedSector(sector.id)}
               >
                 {sector.name}
-                {!sector.active && <span className="ml-2 text-xs">(Coming Soon)</span>}
               </Button>
             ))}
           </div>
