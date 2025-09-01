@@ -5,60 +5,38 @@ const Services = () => {
   const services = [
     {
       icon: Search,
-      title: "Customer Experience Diagnostics",
-      subtitle: "Find the friction before you fund the fix.",
+      title: "DiscoveryStack® — Fixed Package",
+      subtitle: "Diagnose before you invest.",
       features: [
-        "DiscoveryStack® Diagnostics — our proprietary framework that maps journeys, pinpoints pain points, and identifies root causes.",
-        "CX Audits & Heuristic Evaluations (web, app, in-store)",
-        "Funnel analysis & drop-off point diagnosis",
-        "Research synthesis from interviews, observations, analytics"
-      ]
-    },
-    {
-      icon: Palette,
-      title: "UX & Product Design",
-      subtitle: "Design experiences that convert, retain, and delight.",
-      features: [
-        "UX/UI Design for Web & App",
-        "Mobile-first product design",
-        "Prototyping & user flows",
-        "Accessibility & usability optimisation",
-        "Behaviourally informed interaction design"
+        "4–6 week diagnostic that maps CX + operations",
+        "Friction & root-cause findings",
+        "Prioritised roadmap + impact matrix (effort × value)",
+        "AI opportunity map (assist/act/advise)",
+        "Packages: Clarity (£12,500+), Impact (£19,500+), Vision (£29,500+)"
       ]
     },
     {
       icon: Settings,
-      title: "Service Design",
-      subtitle: "Align your end-to-end journeys across people, systems, and processes.",
+      title: "Consultancy — Day rate or subscription",
+      subtitle: "Discovery → Design → Delivery",
       features: [
-        "Customer Journey Mapping",
-        "Service Blueprints",
-        "Cross-channel Experience Design",
-        "Operational and Process Mapping",
-        "Omni-channel service design strategies"
+        "Discovery: diagnostics, audits, decision support",
+        "Design: strategy, roadmaps, solution definition",
+        "Delivery: governance, measurement, de-risking",
+        "Day rate typically £950–£1,250+/day (by seniority/scope)",
+        "Retainers available; priced to outcomes and cadence"
       ]
     },
     {
-      icon: TrendingUp,
-      title: "Experience Strategy & CX Consulting",
-      subtitle: "Work smarter, reduce waste, and make better CX investment decisions.",
+      icon: Palette,
+      title: "Design Services — Day rate or subscription",
+      subtitle: "Research-led design that delivers.",
       features: [
-        "Experience Vision & Roadmap Planning",
-        "Ways of Working & Agile CX Support",
-        "Product-Market Fit Exploration",
-        "Digital Transformation Support",
-        "Leadership-level advisory on CX/UX investments"
-      ]
-    },
-    {
-      icon: Bot,
-      title: "AI & Insight Acceleration",
-      subtitle: "Combine human expertise with AI-powered diagnostics.",
-      features: [
-        "AI-enhanced journey analysis",
-        "Automated insight extraction from customer data",
-        "Training for teams using DiscoveryStack® AI workflows",
-        "Custom dashboards for CX health and decision-making"
+        "Research & mapping; service blueprints",
+        "Interface/interaction design; content & states",
+        "Implementation support, testing, optimisation",
+        "UX & product design",
+        "End-to-end service design"
       ]
     }
   ];
@@ -71,11 +49,11 @@ const Services = () => {
             Designed to <span className="text-primary">Deliver Results</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            🔧 FlawlessCX Service Offerings
+            Everything runs Discovery → Design → Delivery. All pricing indicative; confirmed post-scoping.
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <div key={index} className="bg-slate-50 p-8 rounded-2xl hover:shadow-lg transition-all duration-300 group">
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors duration-300">

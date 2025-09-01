@@ -13,10 +13,10 @@ const Pricing = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              <span className="text-primary">Our Services & Pricing</span>
+              <span className="text-primary">Services & Pricing</span>
             </h1>
             <p className="text-xl text-muted-foreground">
-              We make it easy to work with us — whether you need deep diagnostic insight or flexible design and strategy support.
+              Everything runs Discovery → Design → Delivery. Pricing indicative; confirmed post-scoping.
             </p>
           </div>
         </div>
@@ -29,7 +29,7 @@ const Pricing = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold mb-6">What We Offer</h2>
               <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-                At FlawlessCX, we don't just design experiences — we help you deliver measurable value by finding the right problems to solve before you commit to delivery. Here's how we work with clients:
+                DiscoveryStack® fixed package; Consultancy & Design by day rate or subscription; all delivered through Discovery → Design → Delivery.
               </p>
             </div>
             
@@ -41,10 +41,10 @@ const Pricing = () => {
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                       <Search className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Discovery & Diagnosis</h3>
-                    <p className="text-sm text-muted-foreground font-medium mb-4">Find the friction. Fix the cause.</p>
+                    <h3 className="text-xl font-bold mb-2">DiscoveryStack® — Fixed Package</h3>
+                    <p className="text-sm text-muted-foreground font-medium mb-4">Diagnose before you invest.</p>
                     <p className="text-sm text-muted-foreground mb-6">
-                      We identify what's holding your customers back — and why — before you invest in design or development.
+                      Productised diagnostic with optional upgrades (deeper qual, data analysis, pilot support, AI safety guidelines).
                     </p>
                   </div>
                   
@@ -73,7 +73,7 @@ const Pricing = () => {
                   
                   <div className="bg-slate-50 p-3 rounded-lg">
                     <p className="text-sm font-medium text-muted-foreground">
-                      Ideal for teams needing clarity on what to fix — and where to start.
+                      Clarity from £12,500 · Impact from £19,500 · Vision from £29,500+
                     </p>
                   </div>
                 </CardContent>
@@ -86,10 +86,10 @@ const Pricing = () => {
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                       <Users className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Strategy & Consulting</h3>
+                    <h3 className="text-xl font-bold mb-2">Consultancy — Day rate or subscription</h3>
                     <p className="text-sm text-muted-foreground font-medium mb-4">Smart decisions start with the right questions.</p>
                     <p className="text-sm text-muted-foreground mb-6">
-                      We support leadership and product teams with insight, focus, and strategic direction.
+                      Discovery: diagnostics, audits, decision support; Design: strategy, roadmaps, solution definition; Delivery: governance, measurement, de-risking.
                     </p>
                   </div>
                   
@@ -131,10 +131,10 @@ const Pricing = () => {
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                       <Palette className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-xl font-bold mb-2">Design & Delivery</h3>
+                    <h3 className="text-xl font-bold mb-2">Design Services — Day rate or subscription</h3>
                     <p className="text-sm text-muted-foreground font-medium mb-4">Design that delivers. Not just looks good.</p>
                     <p className="text-sm text-muted-foreground mb-6">
-                      We help you bring the right solutions to life — tested, validated, and ready to deliver results.
+                      Research & mapping; service blueprints; Interface/interaction design; content & states; Implementation support, testing, optimisation.
                     </p>
                   </div>
                   
@@ -197,15 +197,15 @@ const Pricing = () => {
                       <Users className="w-8 h-8 text-muted-foreground" />
                     </div>
                     <CardTitle className="text-xl mb-2">Day Rate</CardTitle>
-                    <div className="mb-4">
-                      <span className="text-3xl font-bold text-primary">£950</span>
-                      <span className="text-sm text-muted-foreground ml-1">/ day</span>
-                    </div>
+                  <div className="mb-4">
+                    <span className="text-3xl font-bold text-primary">£950–£1,250+</span>
+                    <span className="text-sm text-muted-foreground ml-1">/ day</span>
+                  </div>
                   </CardHeader>
                   
                   <CardContent className="flex-1 flex flex-col">
                     <p className="text-base mb-4 leading-relaxed">
-                      Bring in senior expertise when you need it.
+                      Bring in senior expertise when you need it (by seniority/scope).
                     </p>
                     <p className="text-sm text-muted-foreground mb-6 flex-1">
                       Ideal for reviews, design critiques, team workshops, or leadership support.

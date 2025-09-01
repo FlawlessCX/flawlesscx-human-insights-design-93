@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight, Lightbulb, Users, BarChart3, Target, Zap, Brain } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const DiscoveryStack = () => {
   const benefits = [
@@ -73,26 +74,25 @@ const DiscoveryStack = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-8">
-              Clarity, Strategy, Confidence —
+              DiscoveryStack® —
               <br />
-              <span className="text-primary">Before You Build</span>
+              <span className="text-primary">Diagnose before you invest</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-              At FlawlessCX, we believe the foundation of any successful customer experience lies in mastering three key stages: Discovery, Design, and Delivery.
+              A 4–6 week diagnostic that maps CX + operations, pinpoints friction, and prioritises fixes by impact.
             </p>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-              Most businesses jump too quickly into design and build—without truly understanding the root causes of friction, missed opportunities, or what their customers actually need. That's where things go wrong.
-            </p>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
-              That's why we created <strong>DiscoveryStack®</strong> — our flagship diagnostics product designed to give you clarity before you commit, and confidence that what you design and deliver will work for both your customers and your business.
+              <strong>Human-centred. AI-accelerated. Delivered in 4–6 weeks.</strong>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg">
-                Book Your Discovery Call
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <Button size="lg" asChild>
+                <Link to="/start-discovery">
+                  Book a Discovery Call
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
               <Button size="lg" variant="outline">
-                See How It Works
+                Explore DiscoveryStack®
               </Button>
             </div>
             
@@ -135,39 +135,39 @@ const DiscoveryStack = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold mb-8 text-center">
-              What is DiscoveryStack®?
+              What You Get
             </h2>
             
             <div className="text-lg text-muted-foreground leading-relaxed space-y-6">
               <p>
-                DiscoveryStack® is a fast, focused diagnostic designed to help you understand what's working, what's not, and where the biggest opportunities lie across your customer experience.
-              </p>
-              
-              <p>
-                It gives you a clear, visual map of the customer journey, highlighting pain points, blockers, and conversion gaps from both a customer and business perspective.
-              </p>
-
-              <p>
-                Unlike generic UX audits or CX reports, DiscoveryStack® combines 10 years of practical expertise gained from working with brands like John Lewis, Sainsbury's, Ticketmaster, Net-a-Porter, Cinch Cars, and Wayflyer. Across all of them, the pattern is the same:
+                A fixed-package diagnostic mapping your end-to-end CX and the business operations behind it (BX). In 4–6 weeks you get root-cause insight, a prioritised roadmap, and an AI opportunity map.
               </p>
 
               <div className="bg-slate-50 p-6 rounded-xl space-y-3">
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span>Friction reduces engagement</span>
+                  <span>Experience & operations map (CX + BX)</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span>Friction reduces conversion</span>
+                  <span>Friction & root-cause findings</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span>And friction kills revenue</span>
+                  <span>Prioritised roadmap + impact matrix (effort × value)</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span>AI opportunity map (assist/act/advise)</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                  <span>Executive playback & alignment workshop(s)</span>
                 </div>
               </div>
 
               <p className="font-medium">
-                DiscoveryStack® identifies exactly where that friction is—and what to do about it.
+                Strong in: checkout and purchase, service/self-serve flows, onboarding (customers/employees), fulfilment/returns, supplier/partner journeys.
               </p>
             </div>
           </div>
@@ -300,46 +300,48 @@ const DiscoveryStack = () => {
           <div className="max-w-7xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
               
-              {/* Silver Tier */}
+              {/* Clarity */}
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Target className="w-8 h-8 text-slate-600" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Silver</h3>
+                  <h3 className="text-2xl font-bold mb-2">Clarity</h3>
                   <div className="mb-4">
-                    <span className="text-3xl font-bold text-slate-700">£7,500</span>
-                    <span className="text-base text-muted-foreground ml-2">fixed price</span>
+                    <span className="text-3xl font-bold text-slate-700">from £12,500</span>
+                    <span className="text-base text-muted-foreground ml-2">4 weeks</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-6">Essential insights for focused improvements</p>
+                  <p className="text-sm text-muted-foreground mb-6">Focused insight on 1–2 journeys</p>
                 </div>
                 
                 <div className="space-y-3 mb-8">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Basic journey mapping</span>
+                    <span className="text-sm">Journey mapping & friction analysis</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Key friction point identification</span>
+                    <span className="text-sm">Root cause identification</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Priority recommendations</span>
+                    <span className="text-sm">Prioritised recommendations</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">2-week delivery</span>
+                    <span className="text-sm">Executive playback</span>
                   </div>
                 </div>
                 
-                <Button variant="outline" size="lg" className="w-full">
-                  Get Started
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Button variant="outline" size="lg" className="w-full" asChild>
+                  <Link to="/start-discovery">
+                    Get Started
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
 
-              {/* Gold Tier */}
+              {/* Impact */}
               <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 ring-2 ring-primary p-8">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -351,18 +353,18 @@ const DiscoveryStack = () => {
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Target className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Gold</h3>
+                  <h3 className="text-2xl font-bold mb-2">Impact</h3>
                   <div className="mb-4">
-                    <span className="text-3xl font-bold text-primary">£13,000</span>
-                    <span className="text-base text-muted-foreground ml-2">fixed price</span>
+                    <span className="text-3xl font-bold text-primary">from £19,500</span>
+                    <span className="text-base text-muted-foreground ml-2">5–6 weeks</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-6">Comprehensive analysis with strategic guidance</p>
+                  <p className="text-sm text-muted-foreground mb-6">Expanded diagnostics + prioritised plan</p>
                 </div>
                 
                 <div className="space-y-3 mb-8">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Complete journey mapping & analysis</span>
+                    <span className="text-sm">Complete CX + BX mapping</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
@@ -370,66 +372,76 @@ const DiscoveryStack = () => {
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Root cause identification</span>
+                    <span className="text-sm">Root cause analysis</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Strategic roadmap</span>
+                    <span className="text-sm">Impact matrix (effort × value)</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">3-week delivery</span>
+                    <span className="text-sm">AI opportunity map</span>
                   </div>
                 </div>
                 
-                <Button size="lg" className="w-full">
-                  Book Discovery Call
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Button size="lg" className="w-full" asChild>
+                  <Link to="/start-discovery">
+                    Book Discovery Call
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
 
-              {/* Platinum Tier */}
+              {/* Vision */}
               <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-slate-400 to-slate-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Target className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Platinum</h3>
+                  <h3 className="text-2xl font-bold mb-2">Vision</h3>
                   <div className="mb-4">
-                    <span className="text-3xl font-bold text-slate-700">£20,000</span>
-                    <span className="text-base text-muted-foreground ml-2">fixed price</span>
+                    <span className="text-3xl font-bold text-slate-700">from £29,500+</span>
+                    <span className="text-base text-muted-foreground ml-2">6+ weeks</span>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-6">Complete solution with ongoing support</p>
+                  <p className="text-sm text-muted-foreground mb-6">Strategic transformation + AI roadmap</p>
                 </div>
                 
                 <div className="space-y-3 mb-8">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Everything in Gold</span>
+                    <span className="text-sm">Everything in Impact</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Competitor benchmarking</span>
+                    <span className="text-sm">Strategic transformation plan</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Implementation workshop</span>
+                    <span className="text-sm">Comprehensive AI roadmap</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">30-day follow-up support</span>
+                    <span className="text-sm">Pilot planning & advisory</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-sm">Priority delivery (2 weeks)</span>
+                    <span className="text-sm">Extended alignment workshops</span>
                   </div>
                 </div>
                 
-                <Button variant="outline" size="lg" className="w-full">
-                  Premium Package
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                <Button variant="outline" size="lg" className="w-full" asChild>
+                  <Link to="/start-discovery">
+                    Premium Package
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                 </Button>
               </div>
+            </div>
+            
+            <div className="text-center mt-8">
+              <p className="text-sm text-muted-foreground">
+                All pricing excludes VAT and is indicative – confirmed post-scoping
+              </p>
             </div>
           </div>
         </div>
@@ -467,9 +479,11 @@ const DiscoveryStack = () => {
             Book a Discovery Call to learn how DiscoveryStack® can reveal the hidden friction 
             costing you customers and revenue.
           </p>
-          <Button size="lg" variant="secondary">
-            Book Your Discovery Call
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button size="lg" variant="secondary" asChild>
+            <Link to="/start-discovery">
+              Book Your Discovery Call
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </Button>
         </div>
       </section>

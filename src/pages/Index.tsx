@@ -5,6 +5,7 @@ import WhatMakesUsDifferent from "@/components/WhatMakesUsDifferent";
 import HowWeWork from "@/components/HowWeWork";
 import DiscoveryStackHighlight from "@/components/DiscoveryStackHighlight";
 import Services from "@/components/Services";
+import AIAgenticApproach from "@/components/AIAgenticApproach";
 import Impact from "@/components/Impact";
 import Clients from "@/components/Clients";
 import WhyChooseUs from "@/components/WhyChooseUs";
@@ -19,7 +20,7 @@ const Index = () => {
       <HowWeWork />
       <DiscoveryStackHighlight />
       <Services />
-      
+      <AIAgenticApproach />
       <Impact />
       <Clients />
       <WhyChooseUs />

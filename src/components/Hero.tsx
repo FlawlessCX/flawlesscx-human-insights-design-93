@@ -10,20 +10,20 @@ const Hero = () => {
       
       <div className="container mx-auto px-6 text-center relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-          Design That Solves.
+          Remove friction.
           <br />
-          <span className="text-primary">Experiences That Deliver.</span>
+          <span className="text-primary">Unlock measurable growth.</span>
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-          We're FlawlessCX — a London-based Strategic UX & Product Design consultancy that finds 
-          the root causes of friction in your customer experience — and fixes them fast.
+          We diagnose root causes across your customer and business experience, then design and deliver fixes — fast. 
+          Powered by DiscoveryStack® and agentic AI.
         </p>
         
         <div className="flex justify-center mb-16">
           <Button size="lg" className="text-lg px-8 py-6 group" asChild>
             <Link to="/start-discovery">
-              Let's Fix What's Holding You Back
+              Book a Discovery Call
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>

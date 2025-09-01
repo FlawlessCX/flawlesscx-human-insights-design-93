@@ -113,103 +113,81 @@ const WhyFlawlessCX = () => {
       {/* Why Choose Us Component */}
       <WhyChooseUs />
 
-      {/* Experience and Value Sections */}
-      <section className="py-16 bg-slate-50">
+      {/* Case Studies Section */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto space-y-16">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+              Proven Results with Major Brands
+            </h2>
             
-            {/* Experience You Can Trust */}
-            <div>
-              <h2 className="text-2xl font-bold mb-8 text-center">
-                🧠 Experience You Can Trust
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">20+ years in the London design industry, spanning UX, service design, and strategy.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">10+ years leading FlawlessCX, solving complex CX problems for major brands.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">Deep expertise earned across high-impact projects worth over £5 billion.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">Worked with industry leaders including John Lewis, Sainsbury's, Net-a-Porter, Virgin Media, Cinch Cars, and Legal & General.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">Real lessons learned from every project — our clients benefit from decades of tested insight, not theory.</span>
+            <div className="space-y-12">
+              {/* John Lewis Case */}
+              <div className="bg-slate-50 p-8 rounded-xl">
+                <h3 className="text-2xl font-bold mb-4 text-primary">John Lewis — Checkout & Service Journeys</h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-red-600 mb-2">Problem:</h4>
+                    <p className="text-muted-foreground">Drop-offs in basket → payment; avoidable service demand.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-blue-600 mb-2">What DiscoveryStack® found:</h4>
+                    <p className="text-muted-foreground">Fragmented address/payment patterns; unclear error states; operational constraints creating rework.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-green-600 mb-2">What we did:</h4>
+                    <p className="text-muted-foreground">Redesigned checkout & self-serve; clarified copy/states; aligned CX with ops rules; prioritised release plan.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Outcome:</h4>
+                    <p className="text-muted-foreground">Higher completion; fewer preventable contacts; cleaner analytics.</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Speed Without Compromise */}
-            <div>
-              <h2 className="text-2xl font-bold mb-8 text-center">
-                ⚡ Speed Without Compromise
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">We don't start from scratch — we apply proven thinking fast, because we've seen what works (and what doesn't).</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">Able to cut through complexity and deliver clear, confident direction quickly.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">Whether it's a scrappy MVP or enterprise-scale rollout, we adapt and move at pace.</span>
+              {/* Sainsbury's Case */}
+              <div className="bg-slate-50 p-8 rounded-xl">
+                <h3 className="text-2xl font-bold mb-4 text-primary">Sainsbury's — Nectar Integration & Order Flows</h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-red-600 mb-2">Problem:</h4>
+                    <p className="text-muted-foreground">Loyalty and order management complexity causing friction.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-blue-600 mb-2">Found:</h4>
+                    <p className="text-muted-foreground">Competing rules across offers/fulfilment; uncertainty in amend/cancel.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-green-600 mb-2">Did:</h4>
+                    <p className="text-muted-foreground">Simplified decisions; clarified loyalty interactions; designed guided amend/cancel; mapped dependencies.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Outcome:</h4>
+                    <p className="text-muted-foreground">Smoother journeys; fewer errors/hand-offs; stronger test signals.</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Strategic, Measurable Value */}
-            <div>
-              <h2 className="text-2xl font-bold mb-8 text-center">
-                🎯 Strategic, Measurable Value
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">No fluff. No guesswork. Just clarity.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">We get to the root cause fast, helping you invest in what really needs fixing.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">Every recommendation is shaped by real-world results and deep commercial awareness.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">Our focus: designing experiences that move the needle — for your customers and your business.</span>
-                </div>
-              </div>
-            </div>
-
-            {/* A Partnership Built on Experience */}
-            <div>
-              <h2 className="text-2xl font-bold mb-8 text-center">
-                🤝 A Partnership Built on Experience
-              </h2>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">You're not buying hours — you're buying two decades of learning, insight, and delivery success.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">We've handled problems like yours before, and know how to navigate them with precision.</span>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0 mt-2" />
-                  <span className="text-base leading-relaxed">We don't just design; we support, challenge, and guide your team to better outcomes.</span>
+              {/* Net-a-Porter Case */}
+              <div className="bg-slate-50 p-8 rounded-xl">
+                <h3 className="text-2xl font-bold mb-4 text-primary">Net-a-Porter — Operational Optimisation</h3>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-red-600 mb-2">Problem:</h4>
+                    <p className="text-muted-foreground">Manual steps delaying order management.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-blue-600 mb-2">Found:</h4>
+                    <p className="text-muted-foreground">Bottlenecks across PO workflows; inconsistent statuses.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-green-600 mb-2">Did:</h4>
+                    <p className="text-muted-foreground">Redesigned workflows/UI; status clarity; service blueprints aligned to ops.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-primary mb-2">Outcome:</h4>
+                    <p className="text-muted-foreground">Faster cycle times; reduced manual effort; foundations for automation.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -227,18 +205,18 @@ const WhyFlawlessCX = () => {
             
             <div className="grid md:grid-cols-3 gap-8">
               <div className="p-6 bg-slate-50 rounded-xl">
-                <div className="text-3xl font-bold text-primary mb-2">25-40%</div>
-                <p className="text-muted-foreground">Average improvement in conversion rates</p>
+                <div className="text-3xl font-bold text-primary mb-2">Trusted</div>
+                <p className="text-muted-foreground">to optimise multi-billion-pound digital channels</p>
               </div>
               
               <div className="p-6 bg-slate-50 rounded-xl">
-                <div className="text-3xl font-bold text-primary mb-2">3-6 months</div>
-                <p className="text-muted-foreground">Typical time to see significant results</p>
+                <div className="text-3xl font-bold text-primary mb-2">4-6 weeks</div>
+                <p className="text-muted-foreground">DiscoveryStack® delivers clarity fast</p>
               </div>
               
               <div className="p-6 bg-slate-50 rounded-xl">
-                <div className="text-3xl font-bold text-primary mb-2">ROI 300%+</div>
-                <p className="text-muted-foreground">Return on investment for most clients</p>
+                <div className="text-3xl font-bold text-primary mb-2">Measurable</div>
+                <p className="text-muted-foreground">conversion and cost-to-serve gains</p>
               </div>
             </div>
           </div>
@@ -248,12 +226,12 @@ const WhyFlawlessCX = () => {
       {/* CTA Section */}
       <section className="py-16 bg-primary text-primary-foreground">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Transform Your Customer Experience?
-          </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Let's start with a diagnostic conversation about your biggest CX challenges.
-          </p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Remove Friction and Unlock Growth?
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              Let's start with a diagnostic conversation about your biggest CX challenges.
+            </p>
           <Button size="lg" variant="secondary" className="group" asChild>
             <Link to="/start-discovery">
               Book Your Discovery Call
