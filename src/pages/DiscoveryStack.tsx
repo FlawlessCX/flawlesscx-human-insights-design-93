@@ -177,7 +177,7 @@ const DiscoveryStack = () => {
                 >
                   {pkg.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-accent text-accent-foreground px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
