@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/value-proposition-hero.jpg";
+import BookDiscoveryDialog from "@/components/BookDiscoveryDialog";
 
 const sectors = [
   { id: 'retail', name: 'Retail', active: true },
@@ -175,6 +176,7 @@ const sectorData = {
 
 const ValueProposition = () => {
   const [selectedSector, setSelectedSector] = useState('retail');
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const currentSector = sectorData[selectedSector as keyof typeof sectorData];
 
   return (
@@ -201,11 +203,9 @@ const ValueProposition = () => {
               </p>
               
               <div className="flex gap-4">
-                <Button size="lg" asChild>
-                  <Link to="/start-discovery">
-                    Book a DiscoveryStack® consultation
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
+                <Button size="lg" onClick={() => setIsDialogOpen(true)}>
+                  Book a DiscoveryStack® consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <Link to="/discovery-stack">See how we prioritise change</Link>
@@ -331,11 +331,9 @@ const ValueProposition = () => {
             {/* CTA */}
             <div className="text-center">
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" asChild>
-                  <Link to="/start-discovery">
-                    Book a DiscoveryStack® consultation
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
+                <Button size="lg" onClick={() => setIsDialogOpen(true)}>
+                  Book a DiscoveryStack® consultation
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <Link to="/discovery-stack">See how we prioritise change</Link>
@@ -345,6 +343,13 @@ const ValueProposition = () => {
           </div>
         </div>
       </section>
+      
+      <BookDiscoveryDialog 
+        isOpen={isDialogOpen} 
+        onOpenChange={setIsDialogOpen} 
+        pageContext="value_proposition"
+        sector={sectors.find(s => s.id === selectedSector)?.name}
+      />
     </div>
   );
 };

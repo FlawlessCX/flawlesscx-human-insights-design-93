@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight, Lightbulb, Users, BarChart3, Target, Zap, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import BookDiscoveryDialog from "@/components/BookDiscoveryDialog";
 
 const DiscoveryStack = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
   const benefits = [
     {
       icon: Target,
@@ -85,11 +88,9 @@ const DiscoveryStack = () => {
               <strong>Human-centred. AI-accelerated. Delivered in 4–6 weeks.</strong>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button size="lg" asChild>
-                <Link to="/start-discovery">
-                  Book a Discovery Call
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
+              <Button size="lg" onClick={() => setIsDialogOpen(true)}>
+                Book a Discovery Call
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button size="lg" variant="outline">
                 Explore DiscoveryStack®
@@ -333,11 +334,9 @@ const DiscoveryStack = () => {
                   </div>
                 </div>
                 
-                <Button variant="outline" size="lg" className="w-full" asChild>
-                  <Link to="/start-discovery">
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                <Button variant="outline" size="lg" className="w-full" onClick={() => setIsDialogOpen(true)}>
+                  Get Started
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
 
@@ -384,11 +383,9 @@ const DiscoveryStack = () => {
                   </div>
                 </div>
                 
-                <Button size="lg" className="w-full" asChild>
-                  <Link to="/start-discovery">
-                    Book Discovery Call
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                <Button size="lg" className="w-full" onClick={() => setIsDialogOpen(true)}>
+                  Book Discovery Call
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
 
@@ -429,11 +426,9 @@ const DiscoveryStack = () => {
                   </div>
                 </div>
                 
-                <Button variant="outline" size="lg" className="w-full" asChild>
-                  <Link to="/start-discovery">
-                    Premium Package
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
+                <Button variant="outline" size="lg" className="w-full" onClick={() => setIsDialogOpen(true)}>
+                  Premium Package
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
             </div>
@@ -479,14 +474,18 @@ const DiscoveryStack = () => {
             Book a Discovery Call to learn how DiscoveryStack® can reveal the hidden friction 
             costing you customers and revenue.
           </p>
-          <Button size="lg" variant="secondary" asChild>
-            <Link to="/start-discovery">
-              Book Your Discovery Call
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+          <Button size="lg" variant="secondary" onClick={() => setIsDialogOpen(true)}>
+            Book Your Discovery Call
+            <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </section>
+
+      <BookDiscoveryDialog 
+        isOpen={isDialogOpen} 
+        onOpenChange={setIsDialogOpen} 
+        pageContext="discovery_stack"
+      />
 
     </div>
   );
