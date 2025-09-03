@@ -6,6 +6,7 @@ import BookDiscoveryDialog from "@/components/BookDiscoveryDialog";
 
 const DiscoveryStack = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [selectedPackage, setSelectedPackage] = useState<string>('');
 
   const uniqueSellingPoints = [
     {
