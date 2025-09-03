@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { CalendarDays, Clock, CheckCircle } from "lucide-react";
@@ -13,16 +14,18 @@ interface BookDiscoveryDialogProps {
   onOpenChange: (open: boolean) => void;
   pageContext?: string;
   sector?: string;
+  selectedPackage?: string;
 }
 
-const BookDiscoveryDialog = ({ isOpen, onOpenChange, pageContext, sector }: BookDiscoveryDialogProps) => {
+const BookDiscoveryDialog = ({ isOpen, onOpenChange, pageContext, sector, selectedPackage }: BookDiscoveryDialogProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     company: '',
     phone: '',
-    message: ''
+    message: '',
+    package: selectedPackage || ''
   });
   const { toast } = useToast();
 
@@ -33,13 +36,32 @@ const BookDiscoveryDialog = ({ isOpen, onOpenChange, pageContext, sector }: Book
     }));
   };
 
+  const handlePackageChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      package: value
+    }));
+  };
+
+  const discoveryPackages = [
+    { value: "Clarity", label: "Clarity - From £12,500 (4 weeks)" },
+    { value: "Impact", label: "Impact - From £19,500 (5-6 weeks)" },
+    { value: "Vision", label: "Vision - From £29,500+ (6+ weeks)" },
+    { value: "Not Sure", label: "Not sure - help me choose" }
+  ];
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
       // Create contextual source information
-      const sourceInfo = `discovery_booking${pageContext ? `_${pageContext}` : ''}${sector ? `_${sector}` : ''}`;
+      const sourceInfo = `discovery_booking${pageContext ? `_${pageContext}` : ''}${sector ? `_${sector}` : ''}${formData.package ? `_${formData.package}` : ''}`;
+      
+      // Create message with package info if selected
+      const messageWithPackage = formData.package 
+        ? `Package Interest: ${formData.package}\n\n${formData.message}`
+        : formData.message;
       
       // Save to database
       const { error: dbError } = await supabase
@@ -49,7 +71,7 @@ const BookDiscoveryDialog = ({ isOpen, onOpenChange, pageContext, sector }: Book
           work_email: formData.email,
           business_name: formData.company,
           phone_number: formData.phone,
-          message: formData.message,
+          message: messageWithPackage,
           source: sourceInfo
         });
 
@@ -65,7 +87,7 @@ const BookDiscoveryDialog = ({ isOpen, onOpenChange, pageContext, sector }: Book
           business_name: formData.company,
           phone_number: formData.phone,
           form_type: 'DiscoveryStack® Consultation',
-          source: `${pageContext || 'website'}${sector ? ` - ${sector}` : ''}`
+          source: `${pageContext || 'website'}${sector ? ` - ${sector}` : ''}${formData.package ? ` - ${formData.package}` : ''}`
         }
       });
 
@@ -84,7 +106,8 @@ const BookDiscoveryDialog = ({ isOpen, onOpenChange, pageContext, sector }: Book
         email: '',
         company: '',
         phone: '',
-        message: ''
+        message: '',
+        package: selectedPackage || ''
       });
       onOpenChange(false);
 
@@ -185,6 +208,25 @@ const BookDiscoveryDialog = ({ isOpen, onOpenChange, pageContext, sector }: Book
                 />
               </div>
             </div>
+
+            {/* Package Selection - only show if from DiscoveryStack */}
+            {pageContext === 'DiscoveryStack' && (
+              <div>
+                <Label htmlFor="package">Package Interest</Label>
+                <Select value={formData.package} onValueChange={handlePackageChange}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select a package or let us help you choose" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {discoveryPackages.map((pkg) => (
+                      <SelectItem key={pkg.value} value={pkg.value}>
+                        {pkg.label}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            )}
 
             <div>
               <Label htmlFor="message">Your biggest CX challenge</Label>

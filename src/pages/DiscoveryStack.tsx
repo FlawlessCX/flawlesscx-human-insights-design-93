@@ -253,6 +253,7 @@ const DiscoveryStack = () => {
         isOpen={isDialogOpen} 
         onOpenChange={setIsDialogOpen}
         pageContext="DiscoveryStack"
+        selectedPackage={selectedPackage}
       />
     </div>
   );
