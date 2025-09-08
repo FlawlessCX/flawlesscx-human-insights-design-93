@@ -6,33 +6,49 @@
 
 @layer base {
   :root {
+    /* FlawlessCX Brand Colors */
     --background: 210 40% 98%;
-    --foreground: 215 55% 10%;
+    --foreground: 210 16% 18%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 55% 10%;
+    --card-foreground: 210 16% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 55% 10%;
+    --popover-foreground: 210 16% 18%;
 
-    --primary: 215 55% 10%;
+    /* Deep Navy - Primary brand color */
+    --primary: 210 56% 22%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 160 84% 39%;
+    /* Bright Blue - Innovation and clarity */
+    --secondary: 200 59% 42%;
     --secondary-foreground: 210 40% 98%;
 
     --muted: 210 40% 96%;
     --muted-foreground: 215 15% 45%;
 
-    --accent: 225 100% 60%;
+    /* Light Blue/Magenta - Human-centred approach */
+    --accent: 320 45% 45%;
     --accent-foreground: 210 40% 98%;
+
+    /* Success Green - ROI and outcomes */
+    --success: 160 84% 39%;
+    --success-foreground: 210 40% 98%;
+
+    /* Warning Orange - Friction points */
+    --warning: 38 92% 50%;
+    --warning-foreground: 210 40% 98%;
+
+    /* Teal - Balance and systematic approach */
+    --teal: 180 84% 35%;
+    --teal-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 210 56% 22%;
 
     --radius: 0.5rem;
 

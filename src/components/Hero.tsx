@@ -15,15 +15,32 @@ const Hero = () => {
           <span className="text-primary">Unlock measurable growth.</span>
         </h1>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-          We diagnose root causes across your customer and business experience, then design and deliver fixes — fast. 
-          Powered by DiscoveryStack® and Agentic AI.
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-4xl mx-auto leading-relaxed">
+          FlawlessCX identifies and eliminates the hidden friction points costing your business revenue. Using our proven DiscoveryStack® methodology, we deliver clarity in 4-6 weeks and implement solutions that optimise both customer journeys and business processes.
         </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-primary mb-2">67%</div>
+            <div className="text-sm text-muted-foreground">of customers abandon purchases due to friction</div>
+            <div className="text-xs text-muted-foreground mt-1">Source: Baymard Institute</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-warning mb-2">15-30%</div>
+            <div className="text-sm text-muted-foreground">potential revenue lost to friction</div>
+            <div className="text-xs text-muted-foreground mt-1">Source: Forrester Research</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-success mb-2">5:1</div>
+            <div className="text-sm text-muted-foreground">average client ROI within 12 months</div>
+            <div className="text-xs text-muted-foreground mt-1">Source: FlawlessCX client data</div>
+          </div>
+        </div>
         
         <div className="flex justify-center mb-16">
           <Button size="lg" className="text-lg px-8 py-6 group" asChild>
             <Link to="/start-discovery">
-              Book a Discovery Call
+              Start Your Free Friction Assessment
               <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
