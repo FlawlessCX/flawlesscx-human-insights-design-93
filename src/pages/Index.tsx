@@ -1,11 +1,14 @@
 
 import Hero from "@/components/Hero";
-import ProblemDefinition from "@/components/ProblemDefinition";
-import SolutionOverview from "@/components/SolutionOverview";
-import DiscoveryStackSection from "@/components/DiscoveryStackSection";
-import ServicePackages from "@/components/ServicePackages";
-import ProvenResults from "@/components/ProvenResults";
+import VideoIntro from "@/components/VideoIntro";
+import WhatMakesUsDifferent from "@/components/WhatMakesUsDifferent";
+import HowWeWork from "@/components/HowWeWork";
+import DiscoveryStackHighlight from "@/components/DiscoveryStackHighlight";
+import Services from "@/components/Services";
+import AIAgenticApproach from "@/components/AIAgenticApproach";
+import Impact from "@/components/Impact";
 import Clients from "@/components/Clients";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import FinalCTA from "@/components/FinalCTA";
 
 
@@ -13,12 +16,14 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Hero />
-      <ProblemDefinition />
-      <SolutionOverview />
-      <DiscoveryStackSection />
-      <ServicePackages />
-      <ProvenResults />
+      <WhatMakesUsDifferent />
+      <HowWeWork />
+      <DiscoveryStackHighlight />
+      <Services />
+      <AIAgenticApproach />
+      <Impact />
       <Clients />
+      <WhyChooseUs />
       <FinalCTA />
     </div>
   );
