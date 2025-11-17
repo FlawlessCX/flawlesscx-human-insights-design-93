@@ -2,17 +2,6 @@ import React from 'react';
 import Header from "./Header";
 import Footer from "./Footer";
 
-// Declare the custom element for TypeScript
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      'elevenlabs-convai': {
-        'agent-id': string;
-      };
-    }
-  }
-}
-
 interface LayoutProps {
   children: React.ReactNode;
 }
@@ -26,9 +15,6 @@ const Layout = ({ children }: LayoutProps) => {
         {children}
       </main>
       <Footer />
-      
-      {/* ElevenLabs ConvAI Widget - Available on all pages */}
-      <elevenlabs-convai agent-id="agent_01jwgcr30vesv9wdg5eg7jn06y"></elevenlabs-convai>
     </div>
   );
 };
