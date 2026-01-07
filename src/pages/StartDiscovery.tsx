@@ -4,9 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Target, Search, Wrench, TrendingUp, Volume2, Video, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-
 interface VideoPlayerProps {
   videoId: string;
   title: string;
@@ -167,38 +165,19 @@ const StartDiscovery = () => {
     setIsSubmitting(true);
 
     try {
-      // First, save to database
-      const { error: dbError } = await supabase
-        .from('contact_submissions')
-        .insert({
-          full_name: formData.fullName,
-          business_name: formData.businessName,
-          work_email: formData.workEmail,
-          mobile_number: formData.phoneNumber || null,
-          source: 'discovery_page'
-        });
+      // Open mailto as a reliable fallback for form submission
+      const subject = encodeURIComponent('Discovery Call Request');
+      const body = encodeURIComponent(
+        `Name: ${formData.fullName}\n` +
+        `Email: ${formData.workEmail}\n` +
+        `Business: ${formData.businessName}\n` +
+        `Phone: ${formData.phoneNumber || 'Not provided'}\n` +
+        `Source: Discovery Page`
+      );
+      
+      window.open(`mailto:alex@flawlesscx.com?subject=${subject}&body=${body}`, '_blank');
 
-      if (dbError) {
-        throw dbError;
-      }
-
-      // Then, send email to Alex
-      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
-        body: {
-          name: formData.fullName,
-          email: formData.workEmail,
-          business_name: formData.businessName,
-          phone_number: formData.phoneNumber,
-          form_type: 'Discovery Call Request',
-          source: 'discovery_page'
-        }
-      });
-
-      if (emailError) {
-        console.error('Email error (non-critical):', emailError);
-      }
-
-      toast.success("Thank you! We'll be in touch soon to schedule your intro call.");
+      toast.success("Thank you! Your email client will open to send your request. We'll be in touch soon!");
       
       // Reset form
       setFormData({
